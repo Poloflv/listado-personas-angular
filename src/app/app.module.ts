@@ -10,7 +10,7 @@ import { LoggingService } from './LoggingService.service';
 import { PersonasService } from './personas.service';
 import { PersonasComponent } from './personas/personas.component';
 import { ErrorComponent } from './error/error.component';
-import { DataServices } from './data.services';
+// import { DataServices } from './data.services';
 import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
@@ -27,7 +27,7 @@ import { HttpClientModule } from '@angular/common/http';
     AppRoutingModule,
     HttpClientModule
   ],
-  providers: [LoggingService, PersonasService, DataServices],
+  providers: [LoggingService, PersonasService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
