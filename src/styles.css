@@ -54,11 +54,65 @@ html {
     text-align: center;
     margin-left: 20px;
   }
+  body::-webkit-scrollbar {
+    width: 12px;               /* width of the entire scrollbar */
+  }
+  
+  body::-webkit-scrollbar-track {
+    background: rgb(255, 255, 255);        /* color of the tracking area */
+  }
+
+  body::-webkit-scrollbar-thumb {
+    background-color: rgb(43, 142, 255);    /* color of the scroll thumb */
+    border-radius: 20px;       /* roundness of the scroll thumb */
+    border: 3px solid rgb(60, 171, 250);  /* creates padding around scroll thumb */
+  }
+
+  
+              
+.shake:hover{
+  animation-name: shake;
+      -webkit-animation-name: shake;
+      -moz-animation-name: shake;
+  animation-duration: 1s;
+      -webkit-animation-duration: 1s;
+      -moz-animation-duration: 1s;
+  animation-iteration-count: infinite;
+      -webkit-animation-iteration-count: infinite;
+      -moz-animation-iteration-count: infinite;
+}
+
+  @keyframes shake {
+      0%  {transform: translate(1px, 1px) rotate(0deg);}
+      10% {transform: translate(-1px, -2px) rotate(-1deg);}
+      20% {transform: translate(-3px, 0px) rotate(1deg);}
+      30% {transform: translate(3px, 2px) rotate(0deg);}
+      40% {transform: translate(1px, -1px) rotate(1deg);}
+      50% {transform: translate(-1px, 2px) rotate(-1deg);}
+      60% {transform: translate(-3px, 1px) rotate(0deg);}
+      70% {transform: translate(3px, 1px) rotate(-1deg);}
+      80% {transform: translate(-1px, -1px) rotate(1deg);}
+      90% {transform: translate(1px, 2px) rotate(0deg);}
+      100% {transform: translate(1px, -2px) rotate(-1deg);}
+  }
+
+  .toStretch{
+    transition: .5s, color .10s;
+        -webkit-transition: .5s, color .10s;
+        -moz-transition: .5s, color .10s;
+  }
+  .toStretch:hover{
+    transform: scale(2, 0.5);
+        -webkit-transform: scale(1.1, 0.8);
+        -moz-transform: scale(1.1, 0.8);
+  }
   
   button {
-    min-height: 50px;
-    width: 50px;
-    border-radius: 50%;
+    margin: 0.5rem;
+    padding: auto;
+    height: 50px;
+    width: 100px;
+    border-radius: 1rem;
     border-color: transparent;
     background-color: #3F51B5;
     color: #fff;
@@ -68,9 +122,10 @@ html {
   }
 
   .buttonRed {
-    min-height: 50px;
-    width: 50px;
-    border-radius: 50%;
+    margin: 1rem;
+    height: 50px;
+    width: 100px;
+    border-radius: 1rem;
     border-color: transparent;
     background-color: red;
     color: #fff;
